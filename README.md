@@ -1,5 +1,7 @@
 # openwrt-with-ua2f
 
+还有很多东西没有完成，正在补充中
+
 ## 前言：
 
 红米AC2100利用openwrt实现giwifi的多设备登录。
