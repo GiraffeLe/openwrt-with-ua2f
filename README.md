@@ -62,6 +62,8 @@ giwifi的网络质量也是**一言难尽**，相信各位用过giwifi的同学�
 
 [红米AC2100刷openwrt教程(bilibili)](https://www.bilibili.com/read/cv18237601/)
 
+[L大](https://github.com/coolsnowwolf/lede)
+
 非常感谢这些大佬，在我编译固件的时候给予了不少帮助。
 
 让我免于校园网的低质量的痛苦和省掉了不少不必要的额外上网费用。
@@ -96,15 +98,15 @@ juice ssh （谷歌商店）
 
 ### 2.给路由器刷breed
 
-[填链接]()
+[wiki刷breed](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E5%88%B7breed)
 
 ### 3.编译固件：
 
-[链接]()
+[wiki编译固件](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E6%9C%AC%E5%9C%B0%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6)
 
 ### 4.后台设置：
 
- [链接]()
+ [wiki后台设置](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E5%90%8E%E5%8F%B0%E8%AE%BE%E7%BD%AE)
 
 ## 不足：
 
