@@ -40,7 +40,6 @@ giwifi的网络质量也是**一言难尽**，相信各位用过giwifi的同学�
 
 
 
-
 ## 个人体验：
 
 在配置好启动ua2f之后，如果正常的运行的话，一般不会被检测到。在我个人大半年的使用过程中，因非人为因素造成的被检测到然后断网的情况几乎没有。
@@ -53,16 +52,69 @@ giwifi的网络质量也是**一言难尽**，相信各位用过giwifi的同学�
 
 [校园网路由器多设备伪装指北](https://learningman.top/archives/304) 
 
-[UA2F](https://github.com/Zxilly/UA2F)
+[UA2F(github)](https://github.com/Zxilly/UA2F)
 
 [openwrt官网](openwrt.org)
 
 [恩山论坛](https://www.right.com.cn/forum/forum.php)
 
-[红米AC2100刷breed](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4066963&highlight=%CB%A2breed)
+[红米AC2100刷breed(恩山)](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=4066963&highlight=%CB%A2breed)
 
-[红米AC2100刷openwrt教程](https://www.bilibili.com/read/cv18237601/)
+[红米AC2100刷openwrt教程(bilibili)](https://www.bilibili.com/read/cv18237601/)
 
 非常感谢这些大佬，在我编译固件的时候给予了不少帮助。
 
 让我免于校园网的低质量的痛苦和省掉了不少不必要的额外上网费用。
+
+## 一些准备：
+
+### 设备：
+
+路由器，网线（最好是两根），电脑，卡针/牙签也行。
+
+### 软件：
+
+#### PC端：
+
+VMare Workstation(虚拟机) [下载链接](https://www.vmware.com/cn/products/workstation-player.html)
+
+XShell(ssh工具，已经有别的ssh可以不下载) [下载链接(家庭/学校免费使用)](https://www.xshell.com/zh/xshell/)
+
+#### 手机端：
+
+juice ssh （谷歌商店）
+
+## 大致步骤：
+
+### 1.确认自己的路由器是否能刷openwrt
+
+①：[openwrt官方固件下载](https://firmware-selector.openwrt.org/?version=22.03.3) 
+
+在这里输入自己的路由器型号，如果能搜到，那就说明可以刷openwrt；如果搜不到，那大概率不能刷。
+
+②：直接百度“xxx（路由器型号）能刷第三方固件吗？”
+
+### 2.给路由器刷breed
+
+[填链接]()
+
+### 3.编译固件：
+
+[链接]()
+
+### 4.后台设置：
+
+ [链接]()
+
+## 不足：
+
+1.因为openwrt是一个linux发行版，所以会被giwifi检测为手机端。如果在**宿舍断电**之后用手机登录giwifi的话，第二天则需要**手动登录**。
+
+**解决方案：**
+
+①在睡觉之前手动下线自己的账号。
+
+②搞一个ups，给路由器单独供电。
+
+
+
