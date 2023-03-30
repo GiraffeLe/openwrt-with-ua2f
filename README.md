@@ -2,6 +2,8 @@
 
 ## 更新日志：
 
+3.30 添加了[可能遇到的问题及解决方案](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E4%B8%80%E4%BA%9B%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)
+
 3.20 ①更新了wiki里的后台设置，加了些图文。②上传了斐讯k2p的固件
 
 ## 介绍：
@@ -38,7 +40,7 @@ giwifi的网络质量也是**一言难尽**，相信各位用过giwifi的同学�
 
 ### Todo:
 
-- [ ] 使用方法/被检测后的措施
+- [X] 使用方法/被检测后的措施
 
 - [ ] 待补充
 
@@ -111,6 +113,10 @@ juice ssh （谷歌商店）
 ### 4.后台设置：
 
  [wiki后台设置](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E5%90%8E%E5%8F%B0%E8%AE%BE%E7%BD%AE)
+ 
+### 5.使用过程中可能遇到的问题及解决方案：
+
+[问题及解决方案](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E4%B8%80%E4%BA%9B%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)
 
 ## 不足：
 
