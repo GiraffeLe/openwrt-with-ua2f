@@ -106,7 +106,7 @@ juice ssh （谷歌商店）
 
 [wiki刷breed](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E5%88%B7breed)
 
-### 3.编译固件：
+### 3.编译固件：（如果用的别人的固件的话可以跳过这一部分）
 
 [wiki编译固件](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E6%9C%AC%E5%9C%B0%E7%BC%96%E8%AF%91%E5%9B%BA%E4%BB%B6)
 
