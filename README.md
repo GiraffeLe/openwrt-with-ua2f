@@ -1,6 +1,8 @@
 # openwrt-with-ua2f
 
 ## 更新日志：
+6.1  ua2f更新了,个人正在学习git中，很快我也会更新
+
 4.7   补充了一下编译固件页面、后台设置界面和readme
 
 3.30 添加了[可能遇到的问题及解决方案](https://github.com/GiraffeLe/openwrt-with-ua2f/wiki/%E4%B8%80%E4%BA%9B%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)
