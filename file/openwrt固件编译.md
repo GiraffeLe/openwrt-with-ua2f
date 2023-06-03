@@ -46,7 +46,13 @@ rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wg
 git clone https://github.com/openwrt/openwrt.git && cd openwrt
 ```
 
-因为openwrt-22.03及以后的版本用的nftables,为避免兼容性问题和本人能力目前有限，还不会解决nftables，故这里用 openwrt-21.02
+因为openwrt-22.03及以后的版本用的nftables,为避免兼容性问题和本人能力目前有限，还不会解决nftables，故这里继续用 openwrt-21.02
+
+原文章这里用的是23版，不过可能是是我没折腾明白，编出的固件没法用iptables
+
+ [SunBK201的openwrt编译与防检测部署](https://sunbk201public.notion.site/sunbk201public/OpenWrt-f59ae1a76741486092c27bc24dbadc59)
+
+切换分支
 
 
 ~~~
@@ -216,6 +222,20 @@ make kernel_menuconfig
 				->NFQUEUE and NFLOG integration with Connection Tracking
 ```
 
+这个大概得一个小时左右。
+
+实在嫌慢的话可以在内核文件中加入==NETFILTER_NETLINK_GLUE_CT=y==
+
+以我的设备红米ac2100为例：
+
+```
+openwrt/target/linux/ramips/mt7621中的config-5.4文件
+```
+
+![image-20230603193933297](assets/image-20230603193933297.png)
+
+
+
 ### 编译：
 
 ```
@@ -224,6 +244,8 @@ make download -j$(nproc) V=s
 ```
 
 [^]: 确保这里没有报错，报错的话多试几次。
+
+建议在开始编译之前再检查一次设置是否保存成功
 
 ```
 #编译(-j后面是线程数，第一次建议用单线程)
