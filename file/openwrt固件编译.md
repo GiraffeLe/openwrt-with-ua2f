@@ -40,27 +40,18 @@ mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 
 rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 ```
 
-下载源码 (下面二者选其一)
+下载源码：
 
 ```
 git clone https://github.com/openwrt/openwrt.git && cd openwrt
-git clone https://github.com/coolsnowwolf/lede && cd lede
 ```
 
-~~如果下载的源码是openwrt，则需要输入以下命令，因为openwrt-22.03 已将 iptables 移除，为避免兼容性问题，暂时切换到 openwrt-21.02~~
+因为openwrt-22.03及以后的版本用的nftables,为避免兼容性问题和本人能力目前有限，还不会解决nftables，故这里用 openwrt-21.02
 
 
 ~~~
-git checkout openwrt-21.02 #不要用这个了
+git checkout openwrt-21.02
 ~~~
-
-已更新至23.05版
-
-```
-git checkout openwrt-23.05
-```
-
-如果遇到问题可以参考：[再编译过程中的问题遇到的问题](再编译过程中的问题)
 
 更新 feeds 软件源
 
@@ -98,13 +89,14 @@ git clone https://github.com/Zxilly/UA2F.git package/UA2F
 
 
 
-**此处为可选插件（非必须），会折腾的可以添加。**
+**此处为可选插件（非必须）**
 
-argon主题（lede源码需要修改，详情看作者说明）
+argon主题
 原链接：[链接](https://github.com/jerrykuku/luci-theme-argon)
 
 ```
 git clone https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-argon
+#在LUIC ->Theme中勾选Luci-theme-argon
 ```
 
 ~~本来打算再放个解锁网易云音乐的，但是个人遇到点小问题，于是把这个插件删掉了，不过用L大的源码的话没问题（L大好像内置，直接勾选就行）~~
@@ -117,9 +109,31 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git  package/luci-theme-
 make menuconfig	
 ```
 
+大概这样
+
+![image-20230603123951511](assets/image-20230603123951511.png)
+
 如果出现"Your display is too small to run Menuconfig!It must be at least 19 lines by 80 columns." 把窗口调大就行。 
 
+**操作说明**
 
+![image-20230603124054333](assets/image-20230603124054333.png)
+
+这里用键盘上的“← →”来控制
+
+“↑，↓”是控制中间部分的。
+
+“Enter”键进入子菜单
+
+空格键 可以切换状态
+
+*代表内置
+
+m是模块化
+
+/键是搜索
+
+？键是帮助
 
 **选择自己设备（以红米AC2100为例）**
 
@@ -138,8 +152,10 @@ make menuconfig
 # Network
 	->Routing and Redirection
 		->ua2f
-			Enable custom User-Agent   选不选自定义ua看个人情况
+			Enable custom User-Agent   选不选自定义ua看个人情况，如果改的话建议和真实										   ua做出差别方便区分
 ```
+
+6.3补充：（实验性个人还没尝试）可以把ua2f模块化<M>，方便更新，内置的话需要重新编译固件
 
 ```
 #加入Luci
