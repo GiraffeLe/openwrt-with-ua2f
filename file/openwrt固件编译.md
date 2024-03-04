@@ -50,6 +50,10 @@ git clone https://github.com/openwrt/openwrt.git && cd openwrt
 
 原文章这里用的是23版，不过可能是是我没折腾明白，编出的固件没法用iptables
 
+**2024.3.4补充**: 已经有一个不太完美的解决方案 [链接](https://www.right.com.cn/forum/thread-8305441-1-1.html)
+
+
+
  [SunBK201的openwrt编译与防检测部署](https://sunbk201public.notion.site/sunbk201public/OpenWrt-f59ae1a76741486092c27bc24dbadc59)
 
 切换分支
@@ -82,7 +86,7 @@ git checkout openwrt-21.02
 
 ### 重要说明：
 
-如果你的校园网用的是**GWifi**的话，图省事的话只需修改ttl即可防检测,但是**极少数**情况下会被检测到，目前还不清楚原因。使用ua2f+ttl方案的话虽然相对麻烦但能**保证不被检测到**。
+~~如果你的校园网用的是**GWifi**的话，图省事的话只需修改ttl即可防检测,但是**极少数**情况下会被检测到，目前还不清楚原因。使用ua2f+ttl方案的话虽然相对麻烦但能**保证不被检测到**。~~
 
 
 
@@ -135,7 +139,7 @@ make menuconfig
 
 *代表内置
 
-m是模块化
+m是只编译不加入到固件中(后期可以通过`opkg install`安装)
 
 /键是搜索
 
@@ -158,10 +162,12 @@ m是模块化
 # Network
 	->Routing and Redirection
 		->ua2f
-			Enable custom User-Agent   选不选自定义ua看个人情况，如果改的话建议和真实										   ua做出差别方便区分
+			Enable custom User-Agent   
+			选不选自定义ua看个人情况，
+			如果改的话建议和真实ua做出差别方便区分
 ```
 
-6.3补充：（实验性个人还没尝试）可以把ua2f模块化<M>，方便更新，内置的话需要重新编译固件
+~~6.3补充：（实验性个人还没尝试）可以把ua2f模块化<M>，方便更新，内置的话需要重新编译固件~~ 后续更新从作者那里找到对应自己架构的版本下载然后安装就行
 
 ```
 #加入Luci
@@ -191,14 +197,13 @@ m是模块化
 		->iptables-mod-conntrack-extra	
 ```
 
-补充：
-
-```
+~~补充：
 如果采用的是只修改ttl的话，记得去
 Base system
 	→dnsmasq 取消勾选
-如果忘了取消勾选在编译的时候会出现问题。
-```
+如果忘了取消勾选在编译的时候会出现问题。~~
+
+
 
 **都选好之后保存** 
 
@@ -224,7 +229,7 @@ make kernel_menuconfig
 
 这个大概得一个小时左右。
 
-实在嫌慢的话可以在内核文件中加入==NETFILTER_NETLINK_GLUE_CT=y==
+实在嫌慢的话可以在内核文件中加入`NETFILTER_NETLINK_GLUE_CT=y`
 
 以我的设备红米ac2100为例：
 
