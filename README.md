@@ -1,5 +1,17 @@
 # Openwrt With Ua2f
 
+## 更新记录:
+
+- 2024.03.04 
+    1.  添加了华三NX30Pro的固件,使用openwrt源码23.05分支构建,已添加ua2f,**请谨慎使用**,详情见release里NX30Pro固件的说明.
+    最下方有一些个人在刷openwrt时遇到的问题及解决方案的链接.
+    2. HPU的同学可以看一下[这里(Auto-Giwifi)](https://github.com/GiraffeLe/Auto-Giwifi),自己用node写的自动登录的js脚本,不过不太适用于在路由器上(希望有好心人写一个py版本的.有的话可以联系我(
+
+
+- 2023.12.03 重写Readme,旧的文件已移动到别的位置.
+    在这里:[旧Readme](./file/README(old).md)
+
+
 ## 提示:
 **重要:**
 
@@ -71,10 +83,6 @@ Github: [链接](https://github.com/openwrt/openwrt)
 
 如果配置好之后网站中显示的两个UA还是相同,不一定是没有配置成功,可能是浏览器的问题,可以换别的浏览器(firefox,chrome,edge)进行尝试.
 
-## 更新记录:
-
-- 2023.12.3日重写Readme,旧的文件已移动到别的位置.
-    在这里:[旧Readme](./file/README(old).md)
 
 
 
@@ -89,4 +97,22 @@ Github: [链接](https://github.com/openwrt/openwrt)
 [校园网路由器多设备伪装指北](https://learningman.top/archives/304) 
 
 [UA2F-Github项目](https://github.com/Zxilly/UA2F)
+
+---
+**H3C NX30Pro** 看这里
+
+我在这里列出了一些链接,方便各位更好的给NX30pro刷机.
+
+[原厂刷Lede/ImmortalWrt和刷回官方](https://www.right.com.cn/forum/thread-8291820-1-1.html)
+
+[Page not found 问题(个人建议开无痕模式进入后台)](https://www.right.com.cn/forum/thread-8294395-1-1.html)
+
+
+[openwrt官方固件自定义防火墙规则(针对firewall4)](https://www.right.com.cn/forum/thread-8305441-1-1.html)
+
+[H3C刷Openwrt官方版教程](https://github.com/openwrt/openwrt/pull/12820)
+
+["Can't open device for writing" 问题](https://www.right.com.cn/forum/thread-8316238-1-1.html)
+
+
 
