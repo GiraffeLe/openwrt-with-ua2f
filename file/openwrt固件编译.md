@@ -40,8 +40,14 @@ mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 
 rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 ```
 
-下载源码：
+下载源码：(二选一,或者你用其他的也行)
 
+lede : (**推荐**)
+```
+git clone https://github.com/coolsnowwolf/lede.git && cd lede
+```
+
+openwrt :
 ```
 git clone https://github.com/openwrt/openwrt.git && cd openwrt
 ```
@@ -50,18 +56,16 @@ git clone https://github.com/openwrt/openwrt.git && cd openwrt
 
 原文章这里用的是23版，不过可能是是我没折腾明白，编出的固件没法用iptables
 
+**推荐用lede**,因为lede的还是iptables,而且对国内用户来说更友好.
+
 **2024.3.4补充**: 已经有一个不太完美的解决方案 [链接](https://www.right.com.cn/forum/thread-8305441-1-1.html)
-
-
 
  [SunBK201的openwrt编译与防检测部署](https://sunbk201public.notion.site/sunbk201public/OpenWrt-f59ae1a76741486092c27bc24dbadc59)
 
-切换分支
-
-
-~~~
+切换分支(使用lede源码的不用输这个)
+```
 git checkout openwrt-21.02
-~~~
+```
 
 更新 feeds 软件源
 
