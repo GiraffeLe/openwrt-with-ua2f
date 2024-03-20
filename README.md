@@ -5,7 +5,9 @@
 - 2024.03.04 
     1.  添加了华三NX30Pro的固件,使用openwrt源码23.05分支构建,已添加ua2f,**请谨慎使用**,详情见release里NX30Pro固件的说明.
     最下方有一些个人在刷openwrt时遇到的问题及解决方案的链接.
-    2. HPU的同学可以看一下[这里(Auto-Giwifi)](https://github.com/GiraffeLe/Auto-Giwifi),自己用node写的自动登录的js脚本,不过不太适用于在路由器上(希望有好心人写一个py版本的.有的话可以联系我(
+    2. HPU的同学可以看一下[(Auto-Giwifi)](https://github.com/GiraffeLe/Auto-Giwifi),自己用node写的自动登录的js脚本
+
+       以及python的自动登录脚本[(mcitem/auth-giwifi-python)](https://github.com/mcitem/auth-giwifi-python)
 
 
 - 2023.12.03 重写Readme,旧的文件已移动到别的位置.
